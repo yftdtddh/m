@@ -1,0 +1,241 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f5f7fa;
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+     /* 防止横向滚动 */
+ }
+
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px;
+     background-color: white;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .menu-icon {
+     font-size: 26px;
+     cursor: pointer;
+ }
+
+ .logo {
+     font-size: 24px;
+ }
+
+ .icons {
+     font-size: 24px;
+ }
+
+ .menu {
+     display: none;
+     /* Initially hidden */
+     position: fixed;
+     top: 0;
+     left: -250px;
+     /* 隐藏在左侧 */
+     width: 250px;
+     height: 100%;
+     background-color: white;
+     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+     transition: left 0.3s;
+     /* 添加滑动效果 */
+     z-index: 1000;
+     /* 确保菜单在其他元素上方 */
+     overflow-y: auto;
+     /* 添加此行使菜单可垂直滚动 */
+ }
+
+ .menu.active {
+     display: block;
+     /* 当激活时显示菜单 */
+     left: 0;
+     /* 向右滑动 */
+ }
+
+ .blur-background {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     backdrop-filter: blur(8px);
+     /* 毛玻璃效果 */
+     z-index: 999;
+     /* 在菜单上方 */
+     display: none;
+     /* 初始状态隐藏 */
+ }
+
+ .menu-item {
+     padding: 15px;
+     border-bottom: 1px solid #eee;
+     color: #333;
+     text-decoration: none;
+     /* 去掉下划线 */
+     display: block;
+     /* 填满整个区域 */
+ }
+
+ .menu-item:hover {
+     background-color: #f0f0f0;
+     /* 悬停效果 */
+ }
+
+ .content {
+     padding: 10px;
+ }
+
+ .button-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+
+ .button {
+     flex: 1 1 calc(50% - 10px);
+     padding: 15px;
+     background-color: white;
+     border-radius: 8px;
+     text-align: center;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .section-title {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* 使“网站列表项”和加号一行 */
+     margin-top: 20px;
+     margin-bottom: 10px;
+     font-weight: bold;
+     color: #333;
+ }
+
+ .add-link {
+     color: black;
+     /* 链接颜色 */
+     font-size: 12px;
+     /* 加号大小 */
+     text-decoration: none;
+     /* 去掉下划线 */
+     margin-left: 10px;
+     /* 与文本的间距 */
+ }
+
+ /* 按钮样式 */
+ .floating-btn {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     margin: 5px;
+     background-color: rgba(190, 155, 186, 0.5);
+     color: white;
+     border: none;
+     border-radius: 50%;
+     width: 50px;
+     /* 调整按钮宽度 */
+     height: 50px;
+     /* 调整按钮高度 */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     font-size: 24px;
+     /* 调整字体大小 */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+     transition: background-color 0.3s;
+ }
+
+ .floating-btn:hover {
+     background-color: #f71b98;
+ }
+
+ /* 夜间模式样式 */
+ body.night-mode {
+     background-color: #333;
+     color: white;
+ }
+
+ body.night-mode header {
+     background-color: #444;
+ }
+
+ body.night-mode .menu {
+     background-color: #444;
+ }
+
+ body.night-mode .menu-item {
+     color: white;
+ }
+
+ body.night-mode .button {
+     background-color: #555;
+     color: white;
+ }
+/* 底部样式 */
+ .footer-box {
+     font-family: Arial, sans-serif;
+     background-color: #f5f5f5;
+     /* 外边背景为浅灰色 */
+ }
+
+ .footer {
+     background-color: #ffffff;
+     /* 中心区域背景为白色 */
+     padding: 20px;
+     border-radius: 10px;
+     /* 圆角 */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     /* 阴影效果 */
+     max-width: 99%;
+     /* 最大宽度 */
+     margin: 20px auto;
+     /* 居中对齐 */
+     text-align: center;
+     /* 添加此行以居中内容 */
+ }
+
+ .footer-links {
+     margin: 10px 0;
+     color: #666;
+ }
+
+ .footer-links a {
+     display: inline-block;
+     /* 更改为 inline-block 以水平排列并实现居中 */
+     margin: 5px 0;
+     /* 上下间距 */
+     text-decoration: none;
+     color: #0077cc;
+     transition: color 0.3s;
+     /* 鼠标悬停颜色变化 */
+ }
+
+ .footer-links a:hover {
+     color: #005fa3;
+     /* 悬停时颜色变深 */
+ }
+
+ .footer-info {
+     margin: 10px 0;
+     font-size: 12px;
+     color: #999;
+ }
+
+ .stats {
+     margin: 10px 0;
+     font-size: 14px;
+     color: #333;
+ }
+
+ .ads-link {
+     color: #0077cc;
+     text-decoration: none;
+     font-weight: bold;
+ }
