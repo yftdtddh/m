@@ -106,6 +106,15 @@
      justify-content: center;
  }
 
+ h2 {
+    color: rgb(208, 23, 128);
+ }
+
+ a {
+    color: #118fe9;
+    text-decoration: none;
+ }
+
  .section-title {
      display: flex;
      align-items: center;

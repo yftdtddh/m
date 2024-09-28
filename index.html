@@ -4,9 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>移动端网站</title>
+  <base target="_blank">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
 </head>
 
 <body onclick="closeMenu(event)">
@@ -33,107 +40,99 @@
   </header>
   </div>
   <div id="menu" class="menu">
-    <a class="menu-item" href="#">首页</a>
+    <a class="menu-item" href="#" target="_self">首页</a>
     <a class="menu-item" href="https://yftdtddh.github.io/">电脑版</a>
-    <a class="menu-item" href="#">示例分类1</a>
-    <a class="menu-item" href="#">示例分类2</a>
-    <a class="menu-item" href="#">示例分类3</a>
-    <a class="menu-item" href="#">示例分类4</a>
-    <a class="menu-item" href="#">示例分类5</a>
-    <a class="menu-item" href="#">示例分类6</a>
-    <a class="menu-item" href="#">示例分类7</a>
-    <a class="menu-item" href="#">示例分类8</a>
-    <a class="menu-item" href="#">示例分类9</a>
-    <a class="menu-item" href="#">示例分类10</a>
-    <a class="menu-item" href="#">示例分类11</a>
-    <a class="menu-item" href="#">示例分类12</a>
-    <a class="menu-item" href="#">示例分类13</a>
-    <a class="menu-item" href="#">示例分类14</a>
-    <a class="menu-item" href="#">示例分类15</a>
-    <a class="menu-item" href="#">示例分类16</a>
-    <a class="menu-item" href="#">示例分类17</a>
-    <a class="menu-item" href="#">示例分类18</a>
-    <a class="menu-item" href="#">示例分类19</a>
-    <a class="menu-item" href="#">示例分类20</a>
-    <a class="menu-item" href="#">示例分类21</a>
-    <a class="menu-item" href="#">示例分类22</a>
+    <a class="menu-item" href="#donghua" target="_self">动画</a>
+    <a class="menu-item" href="#">漫画</a>
+    <a class="menu-item" href="#">游戏</a>
+    <a class="menu-item" href="#">音乐</a>
+    <a class="menu-item" href="#">影视</a>
+    <a class="menu-item" href="#">资讯</a>
+    <a class="menu-item" href="#">社区</a>
+    <a class="menu-item" href="#">综合</a>
+    <a class="menu-item" href="#">图站</a>
+    <a class="menu-item" href="#">工具</a>
   </div>
-  <div id="blur" class="blur-background"></div>
   <div class="content">
     <script>
-      <script>
-        function toggleMenu(event) {
-          event.stopPropagation(); // 防止事件冒泡
+
+      function toggleMenu(event) {
+        event.stopPropagation(); // 防止事件冒泡
         const menu = document.getElementById('menu');
         const blur = document.getElementById('blur');
         const isActive = menu.classList.toggle('active'); // 切换激活状态
         menu.style.display = isActive ? 'block' : 'none'; // 控制菜单显示与隐藏
-        blur.style.display = isActive ? 'block' : 'none'; // 控制模糊背景
-  }
+      }
 
-        function closeMenu(event) {
-    const menu = document.getElementById('menu');
-        const blur = document.getElementById('blur');
+      function closeMenu(event) {
+        const menu = document.getElementById('menu');
         if (menu.classList.contains('active') && !menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
           menu.classList.remove('active'); // 关闭菜单
-        menu.style.display = 'none'; // 隐藏菜单
-        blur.style.display = 'none'; // 隐藏模糊背景
-    }
-  }
+          menu.style.display = 'none'; // 隐藏菜单
+        }
+      }
 
-        // 将点击事件添加到整个页面，点击空白处时关闭菜单
-        document.body.onclick = closeMenu;
+      // 将点击事件添加到整个页面，点击空白处时关闭菜单
+      document.body.onclick = closeMenu;
 
-        // 关联汉堡菜单点击事件
-        document.querySelector('.menu-icon').onclick = toggleMenu;
+      // 关联汉堡菜单点击事件
+      document.querySelector('.menu-icon').onclick = toggleMenu;
     </script>
-
-    </script>
-    <div class="button-container">
-      <div class="button">广告文本</div>
-      <div class="button">广告文本</div>
-    </div>
     <div class="section-title">
-      <span>分类项</span>
-      <a class="add-link" href="/Weblist/yingshi.html">➕</a>
+      <h2 id="donghua">动画</h2>
+      <a class="add-link" href="./Weblist/donghua.html">➕</a>
     </div>
     <div class="button-container">
-      <div class="button">网站列</div>
-      <div class="button">网站列</div>
-      <div class="button">网站列</div>
-      <div class="button">网站列</div>
+      <a class="button" href="https://www.agemys.org/">age动漫</a>
+      <a class="button" href="https://dick.xfani.com/">稀饭动漫</a>
+      <a class="button" href="https://www.qkan8.com/">去看吧</a>
+      <a class="button" href="https://bangumi.online/">新番组</a>
+      <a class="button" href="https://www.mgnacg.com/">橘子动漫</a>
+      <a class="button" href="http://www.eacg.net/">E-ACG</a>
+      <a class="button" href="https://www.tucao.cam/">吐槽弹幕网</a>
+      <a class="button" href="https://www.7sefun.top/">七色番</a>
+      <a class="button" href="https://www.5dm.link/">5弹幕</a>
+      <a class="button" href="https://www.ezdmw.site/">E站弹幕网</a>
+      <a class="button" href="https://www.maigo.cc/">樱之空动漫</a>
+      <a class="button" href="http://www.2kdm.com/">Mutefun</a>
+      <a class="button" href="https://anime1.cc/">ANIME1</a>
+      <a class="button" href="https://www.gugu3.com/">咕咕番</a>
+      <a class="button" href="https://catw.moe/">喵物次元</a>
+      <a class="button" href="https://www.dqsj.top/">打驴动漫</a>
+      <a class="button" href="http://bilfun.cc/">bilfun</a>
+      <a class="button" href="https://www.dmdm0.com/">动漫蛋</a>
+      <a class="button" href="http://www.kelatv.com/">克拉TV</a>
+      <a class="button" href="https://www.ntdm9.com/">nt动漫</a>
     </div>
-    <!-- 更多按钮等 -->
   </div>
-
   <!-- 浮动按钮 -->
   <button class="floating-btn" onclick="scrollToTop()">↑</button>
   <button class="floating-btn" style="bottom: 80px;" onclick="toggleNightMode()">🌙</button>
 
   <script>
-        function toggleMenu(event) {
-          event.stopPropagation(); // Prevent event bubbling
-        const menu = document.getElementById('menu');
-        const blur = document.getElementById('blur');
-        const isActive = menu.classList.toggle('active'); // Toggle active state
-        blur.style.display = isActive ? 'block' : 'none'; // Control blur background display
+    function toggleMenu(event) {
+      event.stopPropagation(); // Prevent event bubbling
+      const menu = document.getElementById('menu');
+      const blur = document.getElementById('blur');
+      const isActive = menu.classList.toggle('active'); // Toggle active state
+      blur.style.display = isActive ? 'block' : 'none'; // Control blur background display
     }
 
-        function closeMenu(event) {
+    function closeMenu(event) {
       const menu = document.getElementById('menu');
-        const blur = document.getElementById('blur');
-        if (menu.classList.contains('active') && !menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
-          menu.classList.remove('active'); // Close menu
+      const blur = document.getElementById('blur');
+      if (menu.classList.contains('active') && !menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
+        menu.classList.remove('active'); // Close menu
         blur.style.display = 'none'; // Hide blur background
       }
     }
 
-        function scrollToTop() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-        function toggleNightMode() {
-          document.body.classList.toggle('night-mode');
+    function toggleNightMode() {
+      document.body.classList.toggle('night-mode');
     }
   </script>
 
@@ -151,13 +150,12 @@
         <a href="#">更多链接</a>
       </div>
       <div class="footer-info">
-        备案 ・ 网站地图 ・ 网站提交 ・ 每日网站数据统计：
+        备案无  ・ 网站数据统计：
       </div>
       <div class="stats">
-        今日访问量 99999909 ・ 总访问量 1000000000114514
-      </div>
-      <div>
-        <a href="#" class="ads-link">广告</a>
+        今日访问量 99999999 ・ <span id="busuanzi_container_site_uv">
+          本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
       </div>
     </div>
   </div>

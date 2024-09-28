@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例网站列表</title>
+    <link rel="stylesheet" href="/css/ordinary.css">
+</head>
+
+<body onclick="closeMenu(event)">
+    <header>
+        <div class="menu-icon" onclick="toggleMenu(event)">☰</div>
+    </header>
+    <div id="menu" class="menu">
+        <a class="menu-item" href="/">首页</a>
+    </div>
+    <div id="blur" class="blur-background"></div>
+
+    <div class="content">
+        <h2>动画网址列表</h2>
+        <h3>其它在线动画网站</h3>
+        <div class="link-item"><a href="https://www.iyxdm.cc/">怡萱动漫</a></div>
+        <div class="link-item"><a href="http://www.xxmanmi.com/">小小漫迷</a></div>
+        <div class="link-item"><a href="https://www.ziyedm.com/">子夜动漫</a></div>
+        <div class="link-item"><a href="https://www.fsdm02.com/">番薯动漫</a></div>
+        <div class="link-item"><a href="https://www.opacg.com/">欧派动漫</a></div>
+        <div class="link-item"><a href="http://www.acgnya.com/">ACGnya</a></div>
+        <div class="link-item"><a href="https://xuandm.com/">XDM动漫</a></div>
+        <div class="link-item"><a href="https://www.iyxdm.cc/">怡萱动漫</a></div>
+        <div class="link-item"><a href="http://www.xxmanmi.com/">小小漫迷</a></div>
+        <div class="link-item"><a href="https://animoe.org/">Animeo动漫</a></div>
+        <div class="link-item"><a href="https://dm84.tv/">动漫巴士</a></div>
+        <div class="link-item"><a href="https://www.huazidm.com/">花子动漫</a></div>
+        <div class="link-item"><a href="https://www.mitaodm.com/">蜜桃动漫</a></div>
+        <div class="link-item"><a href="http://ppxdm.com/">PPXDM动漫</a></div>
+        <div class="link-item"><a href="https://www.ssrfun.com/">SSRFun动漫</a></div>
+        <div class="link-item"><a href="https://www.acg.party/">次元派对动漫</a></div>
+        <div class="link-item"><a href="https://anime.girigirilove.com/">girlgirl爱动漫~</a></div>
+        <!-- 分页器 -->
+        <div class="pagination">
+            <a href="#"><button>1</button></a>
+            <a href="#"><button>2</button></a>
+            <a href="next_page_url"><button>下一页</button></a>
+        </div>
+
+
+        <!-- Floating buttons -->
+        <button class="floating-btn" onclick="scrollToTop()">↑</button>
+        <button class="floating-btn" style="bottom: 80px;" onclick="toggleNightMode()">🌙</button>
+
+        <script>
+            function toggleMenu(event) {
+                event.stopPropagation(); // Prevent event bubbling
+                const menu = document.getElementById('menu');
+                const blur = document.getElementById('blur');
+                const isActive = menu.classList.toggle('active'); // Toggle active state
+                blur.style.display = isActive ? 'block' : 'none'; // Control blur background display
+            }
+
+            function closeMenu(event) {
+                const menu = document.getElementById('menu');
+                const blur = document.getElementById('blur');
+                if (menu.classList.contains('active') && !menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
+                    menu.classList.remove('active'); // Close menu
+                    blur.style.display = 'none'; // Hide blur background
+                }
+            }
+
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            function toggleNightMode() {
+                document.body.classList.toggle('night-mode');
+            }
+        </script>
+        <div><span id="busuanzi_container_page_pv">
+                此页总访问量<span id="busuanzi_value_page_pv"></span>次
+            </span></div>
+</body>
+
+</html>
