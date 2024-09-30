@@ -55,19 +55,6 @@
      /* 向右滑动 */
  }
 
- .blur-background {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     backdrop-filter: blur(8px);
-     /* 毛玻璃效果 */
-     z-index: 999;
-     /* 在菜单上方 */
-     display: none;
-     /* 初始状态隐藏 */
- }
 
  .menu-item {
      padding: 15px;
@@ -107,12 +94,12 @@
  }
 
  h2 {
-    color: rgb(208, 23, 128);
+     color: rgb(208, 23, 128);
  }
 
  a {
-    color: #118fe9;
-    text-decoration: none;
+     color: #118fe9;
+     text-decoration: none;
  }
 
  .section-title {
@@ -187,7 +174,8 @@
      background-color: #555;
      color: white;
  }
-/* 底部样式 */
+
+ /* 底部样式 */
  .footer-box {
      font-family: Arial, sans-serif;
      background-color: #f5f5f5;

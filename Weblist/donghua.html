@@ -4,182 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>示例网站列表</title>
+    <title>动画网站列表</title>
     <style>
-         body {
-     font-family: Arial, sans-serif;
-     background-color: #f5f7fa;
-     margin: 0;
-     padding: 0;
- }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
 
- header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 10px;
-     background-color: white;
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
- .logo {
-     font-size: 24px;
- }
+        .logo {
+            font-size: 24px;
+        }
 
- .icons {
-     font-size: 24px;
- }
+        .icons {
+            font-size: 24px;
+        }
 
- .menu {
-     display: none;
-     /* Initially hidden */
-     position: fixed;
-     top: 0;
-     left: -250px;
-     /* Hide off-screen */
-     width: 250px;
-     height: 100%;
-     background-color: white;
-     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-     transition: left 0.3s;
-     /* Slide effect */
-     z-index: 1000;
-     /* Ensure the menu is above other elements */
- }
+        .menu {
+            display: none;
+            /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: -250px;
+            /* Hide off-screen */
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: left 0.3s;
+            /* Slide effect */
+            z-index: 1000;
+            /* Ensure the menu is above other elements */
+        }
 
- .menu.active {
-     display: block;
-     /* Show when active */
-     left: 0;
-     /* Slide in */
- }
+        .menu.active {
+            display: block;
+            /* Show when active */
+            left: 0;
+            /* Slide in */
+        }
 
- .menu-icon {
-     font-size: 26px;
-     cursor: pointer;
- }
+        .menu-icon {
+            font-size: 26px;
+            cursor: pointer;
+        }
 
- .blur-background {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     backdrop-filter: blur(8px);
-     /* Blur effect */
-     z-index: 999;
-     /* Above menu */
-     display: none;
-     /* Initially hidden */
- }
+        .blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(8px);
+            /* Blur effect */
+            z-index: 999;
+            /* Above menu */
+            display: none;
+            /* Initially hidden */
+        }
 
- .menu-item {
-     padding: 15px;
-     border-bottom: 1px solid #eee;
-     color: #333;
-     text-decoration: none;
-     /* Remove underline */
-     display: block;
-     /* Fill entire area */
- }
+        .menu-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+            /* Remove underline */
+            display: block;
+            /* Fill entire area */
+        }
 
- .menu-item:hover {
-     background-color: #f0f0f0;
-     /* Hover effect */
- }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+            /* Hover effect */
+        }
 
- .content {
-     padding: 15px;
-     margin-top: 20px;
-     border-radius: 8px;
-     text-align: center;
-     align-items: center;
-     justify-content: center;
- }
+        .content {
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
 
- .content a {
-     color: #007bff;
-     text-decoration: none;
- }
+        .content a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
- .link-item {
-     margin: 10px 0;
-     padding: 10px;
-     background-color: white;
-     border-radius: 8px;
-     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
- }
+        .link-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
- .pagination {
-     display: flex;
-     justify-content: center;
-     margin-top: 20px;
- }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
- .pagination button {
-     margin: 0 5px;
-     padding: 5px 10px;
-     border: none;
-     background-color: #007bff;
-     color: white;
-     border-radius: 5px;
-     cursor: pointer;
- }
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
- .pagination button:hover {
-     background-color: #0056b3;
- }
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
 
- /* Floating button styles */
- .floating-btn {
-     position: fixed;
-     bottom: 20px;
-     right: 20px;
-     margin: 5px;
-     background-color: #007bff;
-     color: white;
-     border: none;
-     border-radius: 50%;
-     width: 60px;
-     /* Adjust button width */
-     height: 60px;
-     /* Adjust button height */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     cursor: pointer;
-     font-size: 24px;
-     /* Font size */
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-     transition: background-color 0.3s;
- }
+        /* Floating button styles */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            /* Adjust button width */
+            height: 60px;
+            /* Adjust button height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            /* Font size */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
 
- .floating-btn:hover {
-     background-color: #0056b3;
- }
+        .floating-btn:hover {
+            background-color: #0056b3;
+        }
 
- /* Night mode styles */
- body.night-mode {
-     background-color: #333;
-     color: white;
- }
+        /* Night mode styles */
+        body.night-mode {
+            background-color: #333;
+            color: white;
+        }
 
- body.night-mode header {
-     background-color: #444;
- }
+        body.night-mode header {
+            background-color: #444;
+        }
 
- body.night-mode .menu {
-     background-color: #444;
- }
+        body.night-mode .menu {
+            background-color: #444;
+        }
 
- body.night-mode .menu-item {
-     color: white;
- }
+        body.night-mode .menu-item {
+            color: white;
+        }
 
- body.night-mode .link-item {
-     background-color: #555;
-     color: white;
- }
+        body.night-mode .link-item {
+            background-color: #555;
+            color: white;
+        }
     </style>
 </head>
 
@@ -193,8 +193,8 @@
     <div id="blur" class="blur-background"></div>
 
     <div class="content">
-        <h2>动画网址列表</h2>
-        <h3>其它在线动画网站</h3>
+        <h1>动画网站列表</h1>
+        <h2>其它在线动画网站</h2>
         <div class="link-item"><a href="https://www.iyxdm.cc/">怡萱动漫</a></div>
         <div class="link-item"><a href="http://www.xxmanmi.com/">小小漫迷</a></div>
         <div class="link-item"><a href="https://www.ziyedm.com/">子夜动漫</a></div>
@@ -250,9 +250,12 @@
                 document.body.classList.toggle('night-mode');
             }
         </script>
-        <div><span id="busuanzi_container_page_pv">
+        <div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_page_pv">
                 此页总访问量<span id="busuanzi_value_page_pv"></span>次
-            </span></div>
+            </span>
+        </div>
 </body>
 
 </html>

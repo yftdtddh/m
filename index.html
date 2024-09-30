@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>移动端网站</title>
+  <title>手机版 - 木晞i的资源汇总</title>
   <base target="_blank">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
@@ -41,21 +41,21 @@
   </div>
   <div id="menu" class="menu">
     <a class="menu-item" href="#" target="_self">首页</a>
-    <a class="menu-item" href="https://yftdtddh.github.io/">电脑版</a>
+    <a class="menu-item" href="https://yftdtddh.github.io/" target="_self">电脑版（横屏并开电脑模式可用）</a>
     <a class="menu-item" href="#donghua" target="_self">动画</a>
-    <a class="menu-item" href="#">漫画</a>
-    <a class="menu-item" href="#">游戏</a>
-    <a class="menu-item" href="#">音乐</a>
-    <a class="menu-item" href="#">影视</a>
-    <a class="menu-item" href="#">资讯</a>
-    <a class="menu-item" href="#">社区</a>
-    <a class="menu-item" href="#">综合</a>
-    <a class="menu-item" href="#">图站</a>
-    <a class="menu-item" href="#">工具</a>
+    <a class="menu-item" href="#manhua" target="_self">漫画</a>
+    <a class="menu-item" href="#" target="_self">游戏</a>
+    <a class="menu-item" href="#" target="_self">音乐</a>
+    <a class="menu-item" href="#" target="_self">影视</a>
+    <a class="menu-item" href="#" target="_self">资讯</a>
+    <a class="menu-item" href="#" target="_self">社区</a>
+    <a class="menu-item" href="#" target="_self">综合</a>
+    <a class="menu-item" href="#" target="_self">图站</a>
+    <a class="menu-item" href="#" target="_self">工具</a>
   </div>
+
   <div class="content">
     <script>
-
       function toggleMenu(event) {
         event.stopPropagation(); // 防止事件冒泡
         const menu = document.getElementById('menu');
@@ -97,13 +97,39 @@
       <a class="button" href="http://www.2kdm.com/">Mutefun</a>
       <a class="button" href="https://anime1.cc/">ANIME1</a>
       <a class="button" href="https://www.gugu3.com/">咕咕番</a>
-      <a class="button" href="https://catw.moe/">喵物次元</a>
       <a class="button" href="https://www.dqsj.top/">打驴动漫</a>
       <a class="button" href="http://bilfun.cc/">bilfun</a>
       <a class="button" href="https://www.dmdm0.com/">动漫蛋</a>
       <a class="button" href="http://www.kelatv.com/">克拉TV</a>
       <a class="button" href="https://www.ntdm9.com/">nt动漫</a>
+      <a class="button" href="https://yinghua.im/">樱花动漫</a>
     </div>
+  </div>
+  <div class="section-title">
+    <h2 id="manhua">漫画</h2>
+    <a class="add-link" href="./Weblist/manhua.html">➕</a>
+  </div>
+  <div class="button-container">
+    <a class="button" href="https://www.dongman.la/">动漫啦</a>
+    <a class="button" href="http://didamh.com/">滴答漫画</a>
+    <a class="button" href="https://rawmanga.cc/">Raw manga</a>
+    <a class="button" href="https://www.dm5.com/">漫画人</a>
+    <a class="button" href="https://klz9.com/">KL</a>
+    <a class="button" href="https://dogemanga.com/">漫画狗</a>
+    <a class="button" href="https://www.copymanga.tv/">拷贝漫画</a>
+    <a class="button" href="http://www.1kkk.com/">极速漫画</a>
+    <a class="button" href="https://www.yymanhua.com/">yymanhua</a>
+    <a class="button" href="https://webcomics.jp/">web漫画</a>
+    <a class="button" href="https://komiic.com/">komiic漫画</a>
+    <a class="button" href="https://www.zaimanhua.com/">再漫画</a>
+    <a class="button" href="https://www.fffdm.com/">风之动漫</a>
+    <a class="button" href="https://www.591ac.com/">南方漫画网</a>
+    <a class="button" href="https://welovemanga.one/">welovemanga</a>
+    <a class="button" href="https://www.manhuagui.com/">漫画柜</a>
+    <a class="button" href="https://www.bilimanga.net/">哔哩漫画</a>
+    <a class="button" href="https://www.nicemanhua.com/">nicemanhua</a>
+    <a class="button" href="https://www.omyschool.com/">木马漫画</a>
+    <a class="button" href="https://www.laimanhua8.com/">来漫画</a>
   </div>
   <!-- 浮动按钮 -->
   <button class="floating-btn" onclick="scrollToTop()">↑</button>
@@ -150,10 +176,14 @@
         <a href="#">更多链接</a>
       </div>
       <div class="footer-info">
-        备案无  ・ 网站数据统计：
+        备案无 ・ 网站数据统计：
       </div>
       <div class="stats">
-        今日访问量 99999999 ・ <span id="busuanzi_container_site_uv">
+      <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+      </span> ・
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span
+          id="busuanzi_container_site_uv">
           本站访客数<span id="busuanzi_value_site_uv"></span>人次
         </span>
       </div>
