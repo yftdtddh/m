@@ -167,12 +167,27 @@
  }
 
  body.night-mode .menu-item {
-     color: white;
+     color: rgb(247, 246, 246);
  }
-
+ body.night-mode .menu-item:hover {
+     background-color: #555;
+ }
  body.night-mode .button {
      background-color: #555;
      color: white;
+ }
+
+ body.night-mode .button:hover {
+     background-color: #333;
+     /* 悬停时的背景颜色 */
+ }
+
+ body.night-mode .footer {
+    background-color: #555;
+ }
+
+ body.night-mode .footer-links a {
+     color: #3e00c3cd;
  }
 
  /* 底部样式 */

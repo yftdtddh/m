@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>正版动画 - 动画网站列表</title>
+    <base target="_blank">
+    <link rel="stylesheet" href="/m/css/ordinary.css">
 </head>
-<body>
+<body onclick="closeMenu(event)">
+    <header>
+        <div class="menu-icon" onclick="toggleMenu(event)">☰</div>
+    </header>
+    <div id="menu" class="menu">
+        <a class="menu-item" href="/m/index.html" target="_self">首页</a>
+        <a class="menu-item" href="/m/Weblist/donghua/zhengban/1.html">正版动画</a>
+    </div>
+    <div id="blur" class="blur-background"></div>
+    <div class="content">
+    <h1>正版动画网站列表</h1>
+    <div class="button-container">
+        <a class="button" href="https://www.bilibili.com/anime/">哔哩哔哩动画</a>
+        <a class="button" href="https://www.iqiyi.com/dongman/">爱奇艺动漫</a>
+        <a class="button" href="https://www.acfun.cn/bangumilist">Acfun番剧</a>
+        <a class="button" href="http://comic.le.com/">乐视动画</a>
+        <a class="button" href="http://tv.sohu.com/comic/">搜狐动漫</a>
+        <a class="button" href="https://comic.youku.com/channel/webcomic/">优酷动漫</a>
+        <a class="button" href="http://cartoon.pptv.com/">PP动漫</a>
+        <a class="button" href="https://www.mgtv.com/cartoon/">芒果动漫</a>
+        <a class="button" href="https://ani.gamer.com.tw/">巴哈姆特動畫瘋</a>
+    </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="pagination">
+        <a href="#" target="_self"><button>1</button></a>
+    </div>
+    <div>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_page_pv">
+            此页总访问量<span id="busuanzi_value_page_pv"></span>次
+        </span>
+    </div>
     
-</body>
+    
+    <!-- Floating buttons -->
+    <button class="floating-btn" onclick="scrollToTop()">↑</button>
+    <button class="floating-btn" style="bottom: 80px;" onclick="toggleNightMode()">🌙</button>
+    
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation(); // Prevent event bubbling
+            const menu = document.getElementById('menu');
+            const blur = document.getElementById('blur');
+            const isActive = menu.classList.toggle('active'); // Toggle active state
+            blur.style.display = isActive ? 'block' : 'none'; // Control blur background display
+        }
+
+        function closeMenu(event) {
+            const menu = document.getElementById('menu');
+            const blur = document.getElementById('blur');
+            if (menu.classList.contains('active') && !menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
+                menu.classList.remove('active'); // Close menu
+                blur.style.display = 'none'; // Hide blur background
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+        }
+    </script>
+    
 </html>

@@ -5,182 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫画网站列表</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f7fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-size: 24px;
-        }
-
-        .icons {
-            font-size: 24px;
-        }
-
-        .menu {
-            display: none;
-            /* Initially hidden */
-            position: fixed;
-            top: 0;
-            left: -250px;
-            /* Hide off-screen */
-            width: 250px;
-            height: 100%;
-            background-color: white;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            transition: left 0.3s;
-            /* Slide effect */
-            z-index: 1000;
-            /* Ensure the menu is above other elements */
-        }
-
-        .menu.active {
-            display: block;
-            /* Show when active */
-            left: 0;
-            /* Slide in */
-        }
-
-        .menu-icon {
-            font-size: 26px;
-            cursor: pointer;
-        }
-
-        .blur-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            backdrop-filter: blur(8px);
-            /* Blur effect */
-            z-index: 999;
-            /* Above menu */
-            display: none;
-            /* Initially hidden */
-        }
-
-        .menu-item {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            color: #333;
-            text-decoration: none;
-            /* Remove underline */
-            display: block;
-            /* Fill entire area */
-        }
-
-        .menu-item:hover {
-            background-color: #f0f0f0;
-            /* Hover effect */
-        }
-
-        .content {
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 8px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .content a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .link-item {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .pagination button {
-            margin: 0 5px;
-            padding: 5px 10px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .pagination button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Floating button styles */
-        .floating-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            margin: 5px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            /* Adjust button width */
-            height: 60px;
-            /* Adjust button height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 24px;
-            /* Font size */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
-        }
-
-        .floating-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Night mode styles */
-        body.night-mode {
-            background-color: #333;
-            color: white;
-        }
-
-        body.night-mode header {
-            background-color: #444;
-        }
-
-        body.night-mode .menu {
-            background-color: #444;
-        }
-
-        body.night-mode .menu-item {
-            color: white;
-        }
-
-        body.night-mode .link-item {
-            background-color: #555;
-            color: white;
-        }
-    </style>
+    <base target="_blank">
+    <link rel="stylesheet" href="/m/css/ordinary.css">
 </head>
 
 <body onclick="closeMenu(event)">
@@ -188,31 +14,34 @@
         <div class="menu-icon" onclick="toggleMenu(event)">☰</div>
     </header>
     <div id="menu" class="menu">
-        <a class="menu-item" href="/m/index.html">首页</a>
+        <a class="menu-item" href="/m/index.html" target="_self">首页</a>
     </div>
     <div id="blur" class="blur-background"></div>
     <div class="content">
         <h1>漫画网站列表</h1>
         <h2>其它在线漫画网站</h2>
-        <div class="link-item"><a href="https://www.manhuajingxuan.com/">漫画精选</a></div>
-        <div class="link-item"><a href="https://www.meirimanhua.com/">每日漫画</a></div>
-        <div class="link-item"><a href="https://www.zhongguomanhua.com/">中国漫画</a></div>
-        <div class="link-item"><a href="https://www.woimh.com/">我爱漫画</a></div>
-        <div class="link-item"><a href="https://mangadex.org/">mangadex</a></div>
-        <div class="link-item"><a href="https://rawkuma.com/">rawkuma</a></div>
-        <div class="link-item"><a href="https://www.yamibo.com/site/manga">百合会-漫画</a></div>
-        <div class="link-item"><a href="https://dl-raw.ac/">DL-Raw</a></div>
-        <div class="link-item"><a href="http://www.manmanju.cc/">漫漫聚</a></div>
+        <div class="button-container">
+        <a class="button" href="https://www.manhuajingxuan.com/">漫画精选</a>
+        <a class="button" href="https://www.meirimanhua.com/">每日漫画</a>
+        <a class="button" href="https://www.zhongguomanhua.com/">中国漫画</a>
+        <a class="button" href="https://www.woimh.com/">我爱漫画</a>
+        <a class="button" href="https://mangadex.org/">mangadex</a>
+        <a class="button" href="https://rawkuma.com/">rawkuma</a>
+        <a class="button" href="https://www.yamibo.com/site/manga">百合会-漫画</a>
+        <a class="button" href="https://dl-raw.ac/">DL-Raw</a>
+        <a class="button" href="http://www.manmanju.cc/">漫漫聚</a>
+        </div>
         <h2>漫画下载</h2>
-        <div class="link-item"><a href="https://www.comicores.com/">漫核</a></div>
-        <div class="link-item"><a href="https://mox.moe/">KOX</a></div>
-        <div class="link-item"><a href="https://5ikmh.ink/">吾爱看漫画</a></div>
-        <div class="link-item"><a href="https://www.comicbackup.com/">kindle漫画仓库</a></div>
+        <div class="button-container">     
+        <a class="button" href="https://www.comicores.com/">漫核</a>
+        <a class="button" href="https://mox.moe/">KOX</a>
+        <a class="button" href="https://5ikmh.ink/">吾爱看漫画</a>
+        <a class="button" href="https://www.comicbackup.com/">kindle漫画仓库</a>
+        </div>
+        </div>
         <!-- 分页器 -->
         <div class="pagination">
-            <a href="#"><button>1</button></a>
-            <a href="#"><button>2</button></a>
-            <a href="next_page_url"><button>下一页</button></a>
+            <a href="#" target="_self"><button>1</button></a>
         </div>
         <!-- Floating buttons -->
         <button class="floating-btn" onclick="scrollToTop()">↑</button>
